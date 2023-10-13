@@ -29,7 +29,7 @@ function RangeSum1(arr, L, R) {
 
 
 // 一维数组
-
+// 就是构造一个数组，每一项都是从0到当前项的和 
 function RangeSum2(arr, L, R) {
   const N = arr.length;
   const preSum = new Array(N).fill(0);

@@ -1,4 +1,4 @@
-
+// 选择排序就是双层for循环 第一层便遍历整个数组，第二层是从比第一层多一项开始遍历 找到那个最小的 然后换位置
 function selectSort(arr) {
     if (arr === null || arr.length < 2) return;
     const N = arr.length;
