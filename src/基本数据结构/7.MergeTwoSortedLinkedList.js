@@ -44,3 +44,12 @@ function mergeTwoSortedList(head1, head2) {
 
 const res = mergeTwoSortedList(linkedList1.head, linkedList2.head);
 console.dir(res, { depth: 100 });
+
+/**
+ * 总结：
+ * 1. 要看两个链表谁的头比较小
+ * 2. 定义两个链表开始比较的节点，头比较小的要从第二个节点开始比，头大的从第一个开始比
+ * 3. 准备一个pre变量，用来改变指针的方向
+ * 4. 开始循环比较，pre指向小的那个节点，谁小谁移动
+ * 5. 看cur1和cur2谁指向空了，就跳出循环，pre.next就指向那个不为空的节点
+ */
