@@ -1,3 +1,4 @@
+// 有序数组中找到num 用的是二分法
 // arr是有序的
 function find(arr, num) {
   // 表示不含有
