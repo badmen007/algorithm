@@ -1,4 +1,4 @@
-import LinkedList from "../data-structures/LinkedList/LinkList.js";
+import LinkedList from "../data-structures/linkedList/LinkList.js";
 const arr1 = [3, 4, 6];
 const arr2 = [2, 4, 5];
 const arr3 = [1, 8, 9];
@@ -169,3 +169,12 @@ function mergeList(lists) {
 console.dir(mergeList([linkedList1.head, linkedList2.head, linkedList3.head]), {
   depth: 100,
 });
+
+/**
+ * 这个题目数组中放的都是这些链表的头节点
+ * 
+ * 1. 首先把数组中的头节点都放到优先级队列中(其实这个堆实现的就是优先级队列)
+ * 2. 弹出一个(那肯定是最小的),然后把弹出的那个的下一个节点放入优先级队列中，此时要记住第一个弹出的pre它将作为移动的节点
+ * 3. 当优先级队列不为空的话就弹出，把弹出的节点赋值给pre的下一个，然后弹出的节点赋值给pre
+ * 4. 如果弹出的节点有下一个节点next的话，就把下一个节点放到优先级队列中
+ */
