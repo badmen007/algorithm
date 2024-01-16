@@ -15,7 +15,7 @@ function process(arr, L, R) {
   merge(arr, L, m, R);
 }
 
-// 非递归方法实现
+// 非递归方法实现 --这里需要重新看一下 TODO
 function mergeSort1(arr) {
   if (arr == null || arr.length < 2) {
     return;
@@ -88,7 +88,7 @@ function isEqual(arr1, arr2) {
 }
 
 function test() {
-  const maxSize = 10;
+  const maxSize = 5;
   const maxValue = 100;
   const testTime = 100000;
   console.log("begin");

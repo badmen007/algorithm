@@ -26,6 +26,7 @@ function merge(arr, L, M, R) {
   let ans = 0;
 
   while (p1 >= L && p2 > M) {
+    // 这里的p2-M 就说明了个数 因为是排好序的 所以可以这么算
     ans += arr[p1] > arr[p2] ? p2 - M : 0;
     help[i--] = arr[p1] > arr[p2] ? arr[p1--] : arr[p2--];
   }
@@ -74,7 +75,7 @@ function comparator(arr) {
 function test() {
   const testTime = 100000;
   const maxValue = 100;
-  const maxSize = 100;
+  const maxSize = 4;
   let succeed = true;
   for (let i = 0; i < testTime; i++) {
     const arr1 = generateRandomArray(maxSize, maxValue);

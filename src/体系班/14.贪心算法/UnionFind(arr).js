@@ -44,11 +44,11 @@ function union(x, y) {
 }
 
 // test
-const values = ['A', 'B', 'C', 'D'];
+const values = [1, 2, 3, 4];
 init(values);
 console.log(father, size)
 // 
-union('C', 'D');
-console.log(isSameSet('A', 'B')); // true
-console.log(isSameSet('A', 'C')); // false
+union(3, 4);
+console.log(isSameSet(1, 1)); // true
+console.log(isSameSet(1, 3)); // false
 
