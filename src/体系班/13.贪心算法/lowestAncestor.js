@@ -6,6 +6,7 @@ class Node {
   }
 }
 
+// 这个解法超时了
 // o1, o2代表的是哪两个值的最近祖先;
 function lowestAncestor1(head, o1, o2) {
   if (head === null) {
@@ -45,7 +46,7 @@ function fillParentMap(head, parentMap) {
 
 // 分析
 // 不经过x 1.x的左子树有ans 2.x的右子树有ans
-// 进过x 1.a和b的祖先是x 2.x等于a,并且是b的祖先 3.x等于a，并且是b的祖先
+// 进过x 1.a和b的祖先是x 2.x等于a,并且是b的祖先 3.x等于b，并且是a的祖先
 
 function lowestAncestor2(head, a, b) {
   if (head == null) {

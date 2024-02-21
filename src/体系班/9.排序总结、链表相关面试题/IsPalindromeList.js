@@ -29,6 +29,7 @@ function isPalindrome2(head) {
   if (!head || !head.next) {
     return true;
   }
+  // 这里的right期望到的是下中点的位置
   let right = head.next;
   let cur = head;
   while (cur.next && cur.next.next) {
@@ -54,6 +55,7 @@ function isPalindrome3(head) {
   if (head == null || !head.next) {
     return true;
   }
+  // 这里就是到上中点的位置
   let n1 = head;
   let n2 = head;
   while (n2.next && n2.next.next) {

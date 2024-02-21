@@ -19,14 +19,14 @@ class TwoStacksQueue {
     this.pushToPop();
   }
   poll() {
-    if (!this.stackPop.length === 0 && !this.stackPush.length) {
+    if (this.stackPop.length === 0 && !this.stackPush.length) {
       throw new Error("queue is empty");
     }
     this.pushToPop();
     return this.stackPop.pop();
   }
   peek() {
-    if (!this.stackPop.length === 0 && !this.stackPush.length) {
+    if (this.stackPop.length === 0 && !this.stackPush.length) {
       throw new Error("queue is empty");
     }
     this.pushToPop();

@@ -15,6 +15,16 @@ function largestBSTSubtree(head) {
   return process(head).maxBSTSubtreeSize;
 }
 
+// 这个allSize是为什么 ?? maxBSTSubtreeSize等于size 就表示当前是bst
+// x 不做头 
+// x左树maxBSTSubtreeSize
+// x右树maxBSTSubtreeSize
+// x 做头
+// x左BST x右BST
+// x左max x右min
+// x左size x右size
+
+// 省略了isBST 因为可以用allSize 是否等于maxBSTSubtreeSize来判断isBST
 class Info {
   constructor(m, size, max, min) {
     this.maxBSTSubtreeSize = m;

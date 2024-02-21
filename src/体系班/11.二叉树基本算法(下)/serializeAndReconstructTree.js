@@ -1,5 +1,17 @@
 import { printTree } from "./printBinaryTree.js";
 
+/**
+ * 二叉树可以通过先序、后序 或者是按层遍历的方式序列化和反序列化
+ * 但是不能通过中序遍历的方式来实现序列化和反序列化
+ *         __2
+ *        /
+ *       1
+ *       和
+ *       1__
+ *          \
+ *           2
+ * 补足空位置的中序遍历结果都是{ null, 1, null, 2, null}
+ */
 class Node {
   constructor(value) {
     this.value = value;
@@ -56,6 +68,7 @@ function poss(head, ans) {
   }
 }
 
+// 反序列化 前序的
 function buildByPreQueue(preList) {
   if (preList === null || preList.length === 0) {
     return null;
@@ -74,6 +87,7 @@ function preb(preList) {
   return head;
 }
 
+// 反序列化 后序的
 function buildByPosQueue(posList) {
   if (posList === null || posList.length === 0) {
     return null;
@@ -96,6 +110,7 @@ function posb(posStack) {
   return head;
 }
 
+// 层序遍历
 function levelSerial(head) {
   const ans = [];
   if (head === null) {
@@ -123,6 +138,7 @@ function levelSerial(head) {
   return ans;
 }
 
+// 层序遍历的反序列化
 function buildByLevelQueue(levelList) {
   if (levelList === null || levelList.length === 0) {
     return null;
@@ -171,3 +187,6 @@ console.log(posSerial(head));
 console.log("========");
 console.log(levelSerial(head));
 console.log("========");
+
+const arr = [1, 3, 3, null, null];
+console.log(arr.join(","));

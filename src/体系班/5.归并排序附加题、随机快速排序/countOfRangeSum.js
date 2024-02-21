@@ -1,6 +1,12 @@
 // 这道题直接在leetcode测评：
 // https://leetcode.com/problems/count-of-range-sum/
 
+/*
+* 假设0- i整体累加和是x 给定的范围是[L, Up]
+* 求必须以i位置结尾的子数组，有多少个子数组的累加和在[L, Up]上 等同于
+* 求i之前的所有前缀和中，有多少个前缀和在[x-Up, x-L]上
+*/
+
 function countRangeSum(nums, lower, upper) {
   if (nums == null || nums.length === 0) {
     return 0;
@@ -36,6 +42,7 @@ function merge(sum, L, M, R, lower, upper) {
     const max = sum[i] - lower;
     const min = sum[i] - upper;
     // 这个的写法就是包含左闭右开
+    // 为什么都是小于等于M?
     while (windowR <= M && sum[windowR] <= max) {
       windowR++;
     }

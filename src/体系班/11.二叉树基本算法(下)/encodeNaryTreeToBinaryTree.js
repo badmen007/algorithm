@@ -1,5 +1,5 @@
 
-// 儿子都放在左树的有边界上
+// 儿子都放在左树的右边界上
 
 // Definition for a Node.
 function Node(val, children) {

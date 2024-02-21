@@ -27,6 +27,7 @@ function pre(head) {
 function inOrder(cur) {
   if (cur) {
     const stack = [];
+    // 这个cur是保证当根节点只有右边 的时候能进来
     while (stack.length > 0 || cur !== null) {
       if (cur !== null) {
         stack.push(cur);
